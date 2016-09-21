@@ -4,14 +4,23 @@ import App from '../../src/components/app';
 // describe is a suite of similar tests
 describe('App', () => {
 
-  // it tests a specific attribute of a target
-  it('shows the right text', () => {
+  // renders component to dom with react
+  const component = renderComponent(App);
 
-    // create instance of an app
-    const component = renderComponent(App);
+  // built in function that runs before every it
+  beforeEach( () => {});
+
+  // it tests a specific attribute of a target
+  it('renders to the page', () => {
 
     //      target  | assertion |   expected
-    expect(component).to.contain('React simple starter');
+    expect(component).to.exist;
+
+  });
+
+  it('shows a comment box', () => {
+
+    expect(component.find('.comment-box')).to.exist;
 
   });
 
