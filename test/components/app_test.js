@@ -13,7 +13,7 @@ describe('App', () => {
   // it tests a specific attribute of a target
   it('renders to the page', () => {
 
-    //      target  | assertion |   expected
+    //      target  | assertion
     expect(component).to.exist;
 
   });
